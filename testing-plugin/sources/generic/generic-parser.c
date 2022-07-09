@@ -30,7 +30,7 @@ int generic_parse(CfgLexer *lexer, LogDriver **instance, gpointer arg);
 
 static CfgLexerKeyword generic_keywords[] =
 {
-  { NULL }
+  { "generic", KW_GENERIC_PLUGIN},
 };
 
 CfgParser generic_parser =

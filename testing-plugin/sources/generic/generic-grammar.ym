@@ -56,8 +56,12 @@ start
   : LL_CONTEXT_INNER_DEST first_rule          { YYACCEPT; }
   ;
 
-first_rule
-  :
+dest_generic
+  : KW_GENERIC_PLUGIN
+    {
+      last_plugin = dest_generic_plugin_new();
+      *instance = (LogDriver *) last_plugin;
+    }
   ;
 
 /* INCLUDE_RULES */
