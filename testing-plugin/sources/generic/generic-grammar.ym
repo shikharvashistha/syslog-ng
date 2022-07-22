@@ -53,14 +53,14 @@
 %%
 
 start
-  : LL_CONTEXT_INNER_DEST first_rule          { YYACCEPT; }
+  : LL_CONTEXT_INNER_DEST generic_dest { YYACCEPT; }
   ;
 
-dest_generic
+generic_dest
   : KW_GENERIC_PLUGIN
     {
-      last_plugin = dest_generic_plugin_new();
-      *instance = (LogDriver *) last_plugin;
+      last_plugin = generic_plugin_new();
+      *instance = (LogDriverPlugin *)last_plugin;
     }
   ;
 

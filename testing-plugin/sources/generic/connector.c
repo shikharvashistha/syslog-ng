@@ -11,7 +11,7 @@ struct _GenericPlugin
 };
 
 static GenericPlugin *
-_generic_plugin_new(Slot slot, gpointer object)
+generic_plugin_new(Slot slot, gpointer object)
 {
     GenericPlugin *self = g_new0(GenericPlugin, 1);
 
