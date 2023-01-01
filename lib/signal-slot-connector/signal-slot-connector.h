@@ -56,4 +56,3 @@ SignalSlotConnector *signal_slot_connector_new(void);
 void signal_slot_connector_free(SignalSlotConnector *self);
 
 #endif
-
